@@ -1,0 +1,110 @@
+// ===================
+// ===== GENERAL =====
+// ===================
+
+$prime: #fbb038;
+$primeColor: #00205c;
+
+.flexContain {
+    display: flex;
+}
+
+// ===================
+// ===== ACCUEIL =====
+// ===================
+
+.mainHome {
+    width: 100%;
+    justify-content: space-around;
+
+    * {
+        margin-top: 20px;
+    }
+
+    span {
+        margin-top: 0;
+    }
+
+    div {
+        width: 40%;
+        text-align: center;
+
+        div {
+            width: 100%;
+        }
+    }
+
+    img {
+        width: 40%;
+        height: auto;
+        -o-object-fit: cover;
+        object-fit: cover;
+    }
+}
+
+.mainValeur {
+    background-image: url("../../public/img/chiffresBg.png");
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+
+    * {
+        margin-top: 20px;
+    }
+
+    .flexContain {
+        justify-content: space-around;
+    }
+}
+
+.couleurPrimaire {
+    background-color: $prime !important;
+    color: $primeColor !important;
+}
+
+.btnCard {
+    margin-bottom: 10px !important;
+}
+
+.v-card {
+    background-color: $primeColor !important;
+    // padding: 10px;
+    color: white !important;
+
+    .v-card__title {
+        flex-direction: column;
+    }
+}
+
+.rechLeft {
+    background-color: $prime !important;
+    color: $primeColor !important;
+
+    hr {
+        border-color: $primeColor !important;
+    }
+
+    *::-moz-selection {
+        background-color: $primeColor !important;
+    }
+
+    *::selection {
+        background-color: $primeColor !important;
+    }
+
+    .yellow--text {}
+}
+
+// ==================
+// ===== PROFIL =====
+// ==================
+
+.bioEtAutre {
+    * {
+        color: white;
+    }
+
+    h1 {
+        color: $prime;
+    }
+}
