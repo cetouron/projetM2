@@ -43,6 +43,13 @@
       required
     ></v-text-field>
 
+
+         <v-btn-toggle v-model="profil" tile color="deep-white accent-3" group>
+          <v-btn value="eleve"> Elève </v-btn>
+
+          <v-btn value="tuteur"> Tuteur </v-btn>
+        </v-btn-toggle>
+
     <v-btn block
       :disabled="!valid"
       color="success"
@@ -78,6 +85,7 @@
      links: [{text: 'Home', to: '/'},{text: 'Connexion', to: '/connexion'}],
       valid: true,
       password: '',
+      profil: '',
       passwordRules: [
         v => !!v || 'password is required',
         v => (v && v.length <= 20) || 'password must be less than 20characters',
@@ -92,7 +100,12 @@
 
     methods: {
       validate () {
-      this.$router.push({name: 'home'})
+      if (this.profil == 'eleve') {
+          this.$router.push({name: 'recherche'})
+        }
+        if (this.profil == 'tuteur') {
+          this.$router.push({name: 'profilTuteur'})
+        }
         },
       reset () {
         this.$refs.form.reset()

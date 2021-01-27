@@ -30,6 +30,8 @@
       :rules="emailRules"
       label="E-mail"
        prepend-icon="mdi-email"
+       color="white"
+       background-color="white"
       required
     ></v-text-field>
 
@@ -40,6 +42,8 @@
       :rules="passwordRules"
       label="Mot de passe"
       prepend-icon="mdi-lock"
+       color="white"
+       background-color="white"
       required
     ></v-text-field>
 
@@ -50,8 +54,16 @@
       :rules="passwor2dRules"
       label="Confirmer le mot de passe"
       prepend-icon="mdi-lock"
+       color="white"
+       background-color="white"
       required
     ></v-text-field>
+
+         <v-btn-toggle v-model="profil" tile color="deep-white accent-3" group>
+          <v-btn value="eleve"> Elève </v-btn>
+
+          <v-btn value="tuteur"> Tuteur </v-btn>
+        </v-btn-toggle>
 
     <v-btn block
       :disabled="!valid"
@@ -104,7 +116,12 @@
 
     methods: {
       validate () {
-        this.$refs.form.validate()
+        if (this.profil == 'eleve') {
+          this.$router.push({name: 'profilEleve'})
+        }
+        if (this.profil == 'tuteur') {
+          this.$router.push({name: 'profilTuteur'})
+        }
       },
       reset () {
         this.$refs.form.reset()
@@ -112,6 +129,8 @@
       resetValidation () {
         this.$refs.form.resetValidation()
       },
+    },
+    props: {
     },
   }
 </script>

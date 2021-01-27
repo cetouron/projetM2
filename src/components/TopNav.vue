@@ -16,7 +16,7 @@
 
       <!-- desktop & tablet menu -->
       <v-toolbar-items class="hidden-xs-only">
-        <v-btn to="/" text>
+        <v-btn to="/" >
           <v-icon>mdi-home</v-icon>
           Home
         </v-btn>
@@ -25,68 +25,27 @@
           Store
         </v-btn> -->
 
-        <v-btn to="recherche" text>
+        <v-btn to='recherche'>
           <v-icon>mdi-feature-search</v-icon>
           Recherche
         </v-btn>
 
-        <v-tooltip
-          v-model="show"
-          input-activator
-          bottom
-          fixed
-          :z-index="zIndex"
-          :value="overlay"
-        >
-          <template v-slot:activator="attrs" bottom>
-            <v-btn class="couleurPrimaire" dark @click="mssg()">
-              <v-icon>mdi-message</v-icon>
-              Message
-            </v-btn>
-          </template>
+       
+          <v-btn to='messagerie'>
+          <v-icon>mdi-message</v-icon>
+          Messagerie
+        </v-btn>
 
-          <Chat />
-        </v-tooltip>
+<!--Affichage conditionnel à faire -->
+        <v-btn to='profilEleve'>
+          <v-icon>mdi-account</v-icon>
+          Profil
+        </v-btn>
 
-        <v-tooltip
-          v-model="showP"
-          input-activator
-          bottom
-          fixed
-          :z-index="zIndex"
-          :value="overlay"
-        >
-          <template v-slot:activator="attrs" bottom>
-            <v-btn dark @click="prfl()">
-              <v-icon>mdi-account</v-icon>
-              Profil Eleve
-            </v-btn>
-          </template>
-
-          <div v-if="(profil = 'eleve')"></div>
-          <ProfilEleve />
-          <div v-if="(profil = 'tuteur')"></div>
-        </v-tooltip>
-
-        <v-tooltip
-          v-model="showPT"
-          input-activator
-          bottom
-          fixed
-          :z-index="zIndex"
-          :value="overlay"
-        >
-          <template v-slot:activator="attrs" bottom>
-            <v-btn dark @click="prflT()">
-              <v-icon>mdi-account</v-icon>
-              Profil Tuteur
-            </v-btn>
-          </template>
-
-          <div v-if="(profil = 'eleve')"></div>
-          <ProfilTuteur />
-          <div v-if="(profil = 'tuteur')"></div>
-        </v-tooltip>
+        <v-btn to='profilTuteur'>
+          <v-icon>mdi-account</v-icon>
+          Profil
+        </v-btn>
 
         <!--     <v-btn @click="show = !show" text>
           <v-icon>mdi-message</v-icon>
@@ -123,15 +82,11 @@
 </template>
 
 <script>
-import Chat from "@/components/messagerie/Messagerie.vue";
-import ProfilEleve from "@/components/profilEleve/ProfilEleve.vue";
-import ProfilTuteur from "@/components/profilTuteur/ProfilTuteur.vue";
+
 
 export default {
   components: {
-    Chat,
-    ProfilEleve,
-    ProfilTuteur,
+  
   },
   methods: {
     mssg: function () {

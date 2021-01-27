@@ -19,6 +19,6 @@ export default {
   components: {
     Sidebar,
     ProductDisplay
-  }
+  },
 }
 </script>
