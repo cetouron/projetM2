@@ -31,7 +31,7 @@
         </v-btn>
 
        
-          <v-btn to='messagerie'>
+          <v-btn to='chat'>
           <v-icon>mdi-message</v-icon>
           Messagerie
         </v-btn>
@@ -116,6 +116,8 @@ export default {
         { title: "Store", link: "store", icon: "store" },
         { title: "Cart", link: "cart", icon: "cart" },
         { title: "Recherche", link: "recherche", icon: "feature-search" },
+        { title: "Mesagerie", link: "chat", icon: "message" },
+
       ],
     };
   },

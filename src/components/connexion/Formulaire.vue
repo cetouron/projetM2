@@ -51,7 +51,6 @@
         </v-btn-toggle>
 
     <v-btn block
-      :disabled="!valid"
       color="success"
       class="mr-4"
       @click="validate"
@@ -87,13 +86,13 @@
       password: '',
       profil: '',
       passwordRules: [
-        v => !!v || 'password is required',
-        v => (v && v.length <= 20) || 'password must be less than 20characters',
+        v => !!v || 'Le mot de passe est requis',
+        v => (v && v.length <= 20) || 'Le mot de passe doit être de moins de 20 caractères',
       ],
       email: '',
       emailRules: [
-        v => !!v || 'E-mail is required',
-        v => /.+@.+\..+/.test(v) || 'E-mail must be valid',
+        v => !!v || 'L\'email est requis',
+        v => /.+@.+\..+/.test(v) || 'L\'email doit être valide',
       ],
       
     }),

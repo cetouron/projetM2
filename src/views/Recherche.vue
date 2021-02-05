@@ -20,6 +20,7 @@ export default {
     return {
       data: {
         searchText: "",
+        searchLocal: "",
         prixMax: '',
         ordre: false,
         note: 0

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-sheet height="700" :elevation="4"  class="pa-8 rechLeft" tile>
+    <v-sheet height="900" :elevation="4"  class="pa-8 rechLeft" tile>
       <h3>Filtres</h3>
       <h4>Matière :</h4>
       <section>
@@ -17,7 +17,17 @@
           <v-radio label="Géographie" value="Géographie"></v-radio>
         </v-radio-group>
       </section>
-
+      <hr />
+      <br />
+    <h4>Localisation :</h4>
+      <section>
+        <v-radio-group v-model="data.searchLocal" color="white" mandatory>
+          <v-radio label="Tout" value="Tout"></v-radio>
+          <v-radio label="Lyon" value="Lyon"></v-radio>
+          <v-radio label="Paris" value="Paris"></v-radio>
+          <v-radio label="Marseille" value="Marseille"></v-radio>
+        </v-radio-group>
+      </section>
       <hr />
       <br />
       <h4>Prix maximum :</h4>

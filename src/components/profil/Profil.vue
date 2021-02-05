@@ -19,6 +19,9 @@
         <h1> <span class="black--text text--lighten-2">
               {{ product.name }} </span
             ></h1>
+            <span class="black--text text--lighten-2 caption mr-1">
+              ({{ product.local }}) </span
+            >
 
         <v-row align="center" justify="center">
           <v-card-actions class="pa-4" align="center">
@@ -52,7 +55,7 @@
 
         <v-row>
           <v-col>
-            <v-btn class="couleurPrimaire">Contacter</v-btn>
+            <v-btn to='chat' class="couleurPrimaire">Contacter</v-btn>
           </v-col>
           <v-col>
             <v-btn class="couleurPrimaire">Signaler</v-btn>

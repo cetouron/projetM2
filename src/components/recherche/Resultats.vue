@@ -42,7 +42,7 @@ export default {
     result: function(){
 
       var produits = this.products;
-      var prixMa, matiere;
+      var prixMa, matiere, local;
     
       if (this.data.prixMax == '') {
 
@@ -62,6 +62,15 @@ export default {
        matiere = this.data.searchText;
       }
 
+      if (this.data.searchLocal == 'Tout') {
+
+       local = '';
+      }
+      else 
+      {
+       local = this.data.searchLocal;
+      }
+
        if (this.data.ordre==true) {
                 produits.sort(function(a, b) { return a.price - b.price;});
 
@@ -70,6 +79,8 @@ export default {
             return produits
             .filter((item) => {
                 return item.matiere.toLowerCase().includes(matiere.toLowerCase()); })
+            .filter((item) => {
+                return item.local.toLowerCase().includes(local.toLowerCase()); })
             .filter((item) => { return item.price <= prixMa})
             .filter((item) => { return item.note >= this.data.note})
 
