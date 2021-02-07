@@ -1,5 +1,6 @@
 <template>
   <v-row>
+          <v-row>
     <v-col>
       <v-card
         class="mx-auto elevation-20"
@@ -123,8 +124,15 @@
         </v-card>
         <br />
       </div>
-    </v-col>
-  </v-row>
+    </v-col> 
+     </v-row>
+
+              <v-col>
+             <v-btn @click="deco()" class="red">
+            <span large color="blue darken-2"> Déconnexion</span>
+             </v-btn>
+          </v-col>
+   </v-row>
 </template>
 
 
@@ -168,6 +176,13 @@ export default {
       ],
       value: ["Mathémathique", "Italien", "Physique-Chimie", "Géographie"],
     };
+  },
+    methods: {
+    deco: function () {
+      this.$store.state.pfl = 'pasco';
+                this.$router.push({name: '/'})
+
+    },
   },
   props: {},
 };

@@ -38,21 +38,21 @@
 
 <!--Affichage conditionnel à faire -->
 
- <v-btn v-if="this.pfl=='Tuteur'" to='profilEleve'>
+ <v-btn v-if="this.pfl=='Tuteur'" to='profilTuteur'>
           <v-icon>mdi-account</v-icon>
           Profil
         </v-btn>
 
        
 
-<v-btn v-if="this.pfl=='Eleve'" to='profilTuteur'>
+<v-btn v-if="this.pfl=='Eleve'" to='profilEleve'>
           <v-icon>mdi-account</v-icon>
           Profil
         </v-btn>
 
         <v-btn class="couleurPrimaire" v-if="this.pfl=='Eleve'">
           <v-icon>mdi-star</v-icon>
-          Prenium
+          Premium
         </v-btn>
 
 <v-btn  v-if="this.pfl=='pasco'" to='connexion'>

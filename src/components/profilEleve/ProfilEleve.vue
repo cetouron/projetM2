@@ -82,6 +82,11 @@
         </v-col>
       </v-col>
     </v-card>
+          <v-col>
+             <v-btn @click="deco()" class="red">
+            <span large color="blue darken-2"> Déconnexion</span>
+          </v-btn>
+      </v-col>
   </v-row>
 </template>
 
@@ -116,6 +121,11 @@ export default {
   methods: {
     Enftplus: function () {
       this.nbEnft = this.nbEnft + 1;
+    },
+    deco: function () {
+      this.$store.state.pfl = 'pasco';
+              this.$router.push({name: '/'})
+
     },
   },
 };
