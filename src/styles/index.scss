@@ -61,7 +61,7 @@ $lightColor: #07d3ff;
 
 
 .couleurPrimaire {
-    background-image: linear-gradient($accentColor, lighten($accentColor, 20%));
+    background-image: linear-gradient($accentColor, lighten($accentColor, 20%)) !important;
     // background-color: $accentColor !important;
     color: $primeColor !important;
 }
@@ -107,6 +107,7 @@ $lightColor: #07d3ff;
 }
 
 // ==================
+// ==== AFFICHAGE ===
 // ===== PROFIL =====
 // ==================
 
@@ -135,6 +136,17 @@ $lightColor: #07d3ff;
                 padding: 5px;
             }
         }
+    }
+}
+
+// === TUTEUR ===
+
+.comProfilTuteur {
+    padding: 10px;
+    padding-left: 20px;
+
+    .row .col {
+        text-align: left;
     }
 }
 
