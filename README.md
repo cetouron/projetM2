@@ -1,6 +1,6 @@
 # Tut'Up
 
-This project is made during a class of "gestion de projet" in Master 2 Création Infographique et Multimédia by Maxime Redon, François Seyller and Cedric Touron.
+This project is made during a class of "gestion de projet" in Master 2 Création Infographique et Multimédia by Maxime Redon (Webdesign), François Seyller (Project Manager) and Cedric Touron (Develloper).
 
 # Vuetify Awesome Store Responsive Demo
 
