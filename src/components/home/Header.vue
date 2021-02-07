@@ -82,8 +82,8 @@
               ullamco est sit aliqua dolor do amet sint. Velit officia consequat
               duis enim velit mollit. Exercitation veniam consequat
             </div>
-            <v-btn class="couleurPrimaire" dark v-bind="attrs" v-on="on">
-              Créer un compte
+            <v-btn class="couleurPrimaire" dark v-bind="attrs" v-on="on" to='FAQ'>
+              Notre FAQ
             </v-btn>
           </div>
           <img src="../../../public/img/titre.jpg" width="40%" />

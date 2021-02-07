@@ -18,7 +18,7 @@
       <v-toolbar-items class="hidden-xs-only">
         <v-btn to="/" >
           <v-icon>mdi-home</v-icon>
-          Home
+          Accueil
         </v-btn>
         <!--      <v-btn to="store" text>
         <v-icon>mdi-store</v-icon>
@@ -79,7 +79,7 @@
       </v-toolbar-items>
     </v-app-bar>
 
-    <v-navigation-drawer v-model="drawer" absolute temporary right>
+<!--    <v-navigation-drawer v-model="drawer" absolute temporary right>
       <v-list dense>
         <v-list-item
           v-for="item in items"
@@ -96,7 +96,7 @@
           </v-list-item-content>
         </v-list-item>
       </v-list>
-    </v-navigation-drawer>
+    </v-navigation-drawer> --> 
   </div>
 </template>
 
