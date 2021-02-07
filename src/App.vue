@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <TopNav />
+    <TopNav :data='data'/>
     <v-content>
       <router-view></router-view>
     </v-content>
@@ -29,6 +29,13 @@ import { mapState, mapMutations } from 'vuex'
 import TopNav from './components/TopNav.vue'
 
 export default {
+  data() {
+    return {
+      data: {
+        profil : this.$jambon,
+      }
+    }
+  },
   name: 'app',
   components: {
     TopNav

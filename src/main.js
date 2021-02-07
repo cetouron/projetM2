@@ -12,6 +12,8 @@ import vuetify from './plugins/vuetify'
 import './styles/index.scss'
 
 Vue.config.productionTip = false
+Vue.prototype.$jambon = 'test'
+
 
 new Vue({
   store,

@@ -11,6 +11,7 @@ export default new Vuex.Store({
   state: {
     products,
     messages, 
+    pfl: 'pasco',
     snackbar: {
       show: false,
       variant: 'success',
@@ -36,6 +37,10 @@ export default new Vuex.Store({
         ...state.snackbar,
         ...settings
       }
+    },
+    updateprofil(perso) {
+      this.pfl=perso,
+      console.log(this.pfl)
     }
   },
   actions: {}
