@@ -180,7 +180,7 @@ export default {
     methods: {
     deco: function () {
       this.$store.state.pfl = 'pasco';
-                this.$router.push({name: '/'})
+                this.$router.push({name: 'home'})
 
     },
   },
