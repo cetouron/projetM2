@@ -29,57 +29,46 @@
           <v-btn value="eleve"> Elève </v-btn>
         </v-btn-toggle>
 
-
-
         <v-col cols="12" class="text-center" v-if="text == 'parent'">
+          <div v-for="messages in enft.slice(0, nbEnft)" :key="messages.nom">
+            <div v-if="messages.nom != ''">
+              <v-text-field
+                v-model="messages.nom"
+                :rules="nameRules"
+                label="Nom de l'enfant :"
+                required
+              ></v-text-field>
+              <v-textarea
+                v-model="messages.content"
+                auto-grow
+                filled
+                color="deep-purple"
+                label="Sa description"
+                rows="1"
+              ></v-textarea>
+            </div>
 
-         <div v-for="messages in enft.slice(0,nbEnft)"
-          :key="messages.nom">
+            <div v-else>
+              <v-text-field
+                :rules="nameRules"
+                label="Nom de l'enfant :"
+                required
+              ></v-text-field>
+              <v-textarea
+                auto-grow
+                filled
+                color="deep-purple"
+                label="Sa description"
+                rows="1"
+              ></v-textarea>
+            </div>
+          </div>
 
-      <div v-if="messages.nom!=''">
-          <v-text-field
-            v-model="messages.nom"
-            :rules="nameRules"
-            label="Nom de l'enfant :"
-            required
-          ></v-text-field>
-          <v-textarea
-            v-model="messages.content"
-            auto-grow
-            filled
-            color="deep-purple"
-            label="Sa description"
-            rows="1"
-          ></v-textarea>
-
-      </div>
-
-      <div v-else>
-          <v-text-field
-            :rules="nameRules"
-            label="Nom de l'enfant :"
-            required
-          ></v-text-field>
-          <v-textarea
-            auto-grow
-            filled
-            color="deep-purple"
-            label="Sa description"
-            rows="1"
-          ></v-textarea>
-
-      </div>
-
-    </div>
-
-<v-btn @click="Enftplus()">
-          <v-icon large color="blue darken-2">mdi-plus</v-icon>
-          <span large color="blue darken-2"> Ajouter un enfant</span>
-
+          <v-btn @click="Enftplus()" class="couleurPrimaire">
+            <v-icon large color="blue darken-2">mdi-plus</v-icon>
+            <span large color="blue darken-2"> Ajouter un enfant</span>
           </v-btn>
         </v-col>
-
-       
 
         <v-col cols="12" class="text-center" v-if="text == 'eleve'">
           <v-textarea
@@ -103,21 +92,30 @@ export default {
     return {
       dialog: false,
       text: "parent",
-      nbEnft:2,
-      enft: [ 
-          { nom: 'Clément', content: '13 ans en cinquième, a du mal à se concentrer', age:'4' },
-          { nom: 'Melanie', content: '15 ans en seconde, plutôt bonne mais jamais contre quelques cours particulier', age:'4.5' },
-          { nom:'' , content:'', age:'' },
-          { nom:'' , content:'', age:'' },
-          { nom:'' , content:'', age:'' },
-          { nom:'' , content:'', age:'' },
+      nbEnft: 2,
+      enft: [
+        {
+          nom: "Clément",
+          content: "13 ans en cinquième, a du mal à se concentrer",
+          age: "4",
+        },
+        {
+          nom: "Melanie",
+          content:
+            "15 ans en seconde, plutôt bonne mais jamais contre quelques cours particulier",
+          age: "4.5",
+        },
+        { nom: "", content: "", age: "" },
+        { nom: "", content: "", age: "" },
+        { nom: "", content: "", age: "" },
+        { nom: "", content: "", age: "" },
       ],
     };
   },
   props: {},
   methods: {
     Enftplus: function () {
-      this.nbEnft = this.nbEnft+1;
+      this.nbEnft = this.nbEnft + 1;
     },
   },
 };

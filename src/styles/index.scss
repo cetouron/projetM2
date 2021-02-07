@@ -112,7 +112,7 @@ $lightColor: #07d3ff;
 
 .bioEtAutre {
     * {
-        color: white;
+        color: $primeColor;
     }
 
     h1 {
@@ -120,4 +120,34 @@ $lightColor: #07d3ff;
     }
 }
 
-// .v-dialog
+.v-dialog {
+    >.v-sheet {
+        background-image: none !important;
+        padding: 20px;
+        border-radius: 0 !important;
+
+        >.row {
+            justify-content: center;
+
+            >.v-sheet>.col>.v-sheet {
+                background-image: none !important;
+                border-radius: 0 !important;
+                padding: 5px;
+            }
+        }
+    }
+}
+
+// ==================
+// === Messagerie ===
+// ==================
+
+.received_msg[align="left"] p {
+    background-image: linear-gradient($primeColor, $lightColor) !important;
+    color: white !important;
+}
+
+.received_msg[align="right"] p {
+    background-image: linear-gradient($accentColor, lighten($accentColor, 20%)) !important;
+    color: $primeColor !important;
+}
