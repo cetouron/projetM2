@@ -10,6 +10,8 @@ import Profil from '@/views/Profil.vue'
 import Chat from '@/views/Messagerie.vue'
 import ProfilEleve from '@/views/ProfilEleve.vue'
 import ProfilTuteur from '@/views/ProfilTuteur.vue'
+import FAQ from '@/views/FAQ.vue'
+
 
 export default [
   { path: '/', name: 'home', component: Home },
@@ -23,6 +25,7 @@ export default [
   { path: '/chat', name: 'chat', component: Chat},
   { path: '/profilEleve', name: 'profilEleve', component: ProfilEleve},
   { path: '/profilTuteur', name: 'profilTuteur', component: ProfilTuteur},
+  { path: '/FAQ', name: 'FAQ', component: FAQ},
 
   { path: '/thank-you', name: 'thankyou', component: ThankYou }
 ]
