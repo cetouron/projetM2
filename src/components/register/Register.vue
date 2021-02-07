@@ -92,6 +92,9 @@
 </template>
 
 <script>
+
+import { mapState, mapMutations } from "vuex";
+
   export default {
     data: () => ({
      links: [{text: 'Home', to: '/'},{text: 'Connexion', to: '/connexion'},{text: 'Enregistrer', to: '/inscription'}],
@@ -113,13 +116,17 @@
       ],
       
     }),
-
+    computed: {
+    ...mapState(["pfl"]),
+  },
     methods: {
       validate () {
         if (this.profil == 'eleve') {
+          this.$store.state.pfl='Eleve',
           this.$router.push({name: 'profilEleve'})
         }
         if (this.profil == 'tuteur') {
+          this.$store.state.pfl='Tuteur',
           this.$router.push({name: 'profilTuteur'})
         }
       },

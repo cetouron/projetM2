@@ -25,27 +25,46 @@
           Store
         </v-btn> -->
 
-        <v-btn to='recherche'>
+        <v-btn v-if="this.pfl!='pasco'" to='recherche'>
           <v-icon>mdi-feature-search</v-icon>
           Recherche
         </v-btn>
 
        
-          <v-btn to='chat'>
+          <v-btn v-if="this.pfl!='pasco'" to='chat'>
           <v-icon>mdi-message</v-icon>
           Messagerie
         </v-btn>
 
 <!--Affichage conditionnel à faire -->
-        <v-btn to='profilEleve'>
+
+ <v-btn v-if="this.pfl=='Tuteur'" to='profilEleve'>
           <v-icon>mdi-account</v-icon>
           Profil
         </v-btn>
 
-        <v-btn to='profilTuteur'>
+       
+
+<v-btn v-if="this.pfl=='Eleve'" to='profilTuteur'>
           <v-icon>mdi-account</v-icon>
           Profil
         </v-btn>
+
+        <v-btn class="couleurPrimaire" v-if="this.pfl=='Eleve'">
+          <v-icon>mdi-star</v-icon>
+          Prenium
+        </v-btn>
+
+<v-btn  v-if="this.pfl=='pasco'" to='connexion'>
+          <v-icon>mdi-account</v-icon>
+          Connexion
+        </v-btn>
+
+        <v-btn  v-if="this.pfl=='pasco'" to='inscription'>
+          <v-icon>mdi-account</v-icon>
+          Inscription
+        </v-btn>
+
 
         <!--     <v-btn @click="show = !show" text>
           <v-icon>mdi-message</v-icon>
@@ -83,10 +102,15 @@
 
 <script>
 
+import { mapState, mapMutations } from "vuex";
+
 
 export default {
   components: {
   
+  },
+    computed: {
+    ...mapState(["pfl"]),
   },
   methods: {
     mssg: function () {
