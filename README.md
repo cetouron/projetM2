@@ -1,3 +1,7 @@
+#Tut'Up
+
+This project is made during a class of "gestion de projet" in Master 2 Création Infographique et Multimédia by Maxime Redon, François Seyller and Cedric Touron.
+
 # Vuetify Awesome Store Responsive Demo
 
 This project is a front-end application that demonstrates Vuetify's responsive grid components.
