@@ -64,8 +64,8 @@
               <div>
                 <h3>Confiance</h3>
                 <p>
-                  Mise en relation avec des professeurs certifiés le plus en
-                  mesure de répondre à vos demandes dans les plus brefs délais.
+                  Un apprentissage dans un environnement sécurisant avec une
+                  personne à votre écoute.
                 </p>
               </div>
             </div>
@@ -78,8 +78,8 @@
               <div>
                 <h3>Transmission</h3>
                 <p>
-                  Mise en relation avec des professeurs certifiés le plus en
-                  mesure de répondre à vos demandes dans les plus brefs délais.
+                  Afin que chaque élève puisse se développer et s’accomplir sur
+                  tous les aspects de la vie.
                 </p>
               </div>
             </div>
