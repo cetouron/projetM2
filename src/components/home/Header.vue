@@ -26,14 +26,12 @@
           <div>
             <h2>Qu'est-ce que Tut'Up ?</h2>
             <div>
-              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-              amet sint. Velit officia consequat duis enim velit mollit.
-              Exercitation veniam consequat sunt nostrud amet. Amet minim mollit
-              non deserunt ullamco est sit aliqua dolor do amet sint. Velit
-              officia consequat duis enim velit mollit. Exercitation veniam
-              consequat sunt nostrud amet. Amet minim mollit non deserunt
-              ullamco est sit aliqua dolor do amet sint. Velit officia consequat
-              duis enim velit mollit. Exercitation veniam consequat
+              Tut’Up est une plateforme de mise en relation entre élèves et
+              tuteurs volontaires. Elle s’offre aux élèves en difficulté mais
+              également à ceux qui veulent consolider leur acquis ou exceller
+              dans une matière. En tant que tuteur vous pouvez ici aider un
+              élève dans son travail et sa méthodologie, et l’accompagner lors
+              des différentes transitions entre les cycles.
             </div>
             <v-btn class="couleurPrimaire" dark v-bind="attrs" v-on="on">
               Créer un compte
@@ -45,27 +43,45 @@
           <div class="flexContain">
             <div class="valeur">
               <img
-                src="../../../public/img/valeur1.png"
+                src="../../../public/img/reactivite.png"
                 alt="Valeur1"
-                width="30%"
+                width="50%"
               />
-              <p>nsequat sunt nostrud amet.</p>
+              <div>
+                <h3>Réactivité</h3>
+                <p>
+                  Mise en relation avec des professeurs certifiés le plus en
+                  mesure de répondre à vos demandes dans les plus brefs délais.
+                </p>
+              </div>
             </div>
             <div class="valeur">
               <img
-                src="../../../public/img/valeur2.png"
+                src="../../../public/img/confiance.png"
                 alt="Valeur2"
-                width="30%"
+                width="50%"
               />
-              <p>nsequat sunt nostrud amet.</p>
+              <div>
+                <h3>Confiance</h3>
+                <p>
+                  Mise en relation avec des professeurs certifiés le plus en
+                  mesure de répondre à vos demandes dans les plus brefs délais.
+                </p>
+              </div>
             </div>
             <div class="valeur">
               <img
-                src="../../../public/img/valeur3.png"
+                src="../../../public/img/transmission.png"
                 alt="Valeur3"
-                width="30%"
+                width="50%"
               />
-              <p>nsequat sunt nostrud amet.</p>
+              <div>
+                <h3>Transmission</h3>
+                <p>
+                  Mise en relation avec des professeurs certifiés le plus en
+                  mesure de répondre à vos demandes dans les plus brefs délais.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -73,16 +89,20 @@
           <div>
             <h2>Pourquoi nous choisir ?</h2>
             <div>
-              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-              amet sint. Velit officia consequat duis enim velit mollit.
-              Exercitation veniam consequat sunt nostrud amet. Amet minim mollit
-              non deserunt ullamco est sit aliqua dolor do amet sint. Velit
-              officia consequat duis enim velit mollit. Exercitation veniam
-              consequat sunt nostrud amet. Amet minim mollit non deserunt
-              ullamco est sit aliqua dolor do amet sint. Velit officia consequat
-              duis enim velit mollit. Exercitation veniam consequat
+              Tut’Up vous propose un enseignement complémentaire à ceux du
+              cursus scolaire. Vous trouverez des tuteurs proches de chez vous
+              avec des horaires flexibles. Chez Tut’Up, l’expérience des tuteurs
+              en tant qu’ancien élève est importante. Elle lui permet de donner
+              des cours variés en fonction du niveau de l’élève et de ses
+              objectifs à atteindre, de la 6ème à la terminale.
             </div>
-            <v-btn class="couleurPrimaire" dark v-bind="attrs" v-on="on" to='FAQ'>
+            <v-btn
+              class="couleurPrimaire"
+              dark
+              v-bind="attrs"
+              v-on="on"
+              to="FAQ"
+            >
               Notre FAQ
             </v-btn>
           </div>
